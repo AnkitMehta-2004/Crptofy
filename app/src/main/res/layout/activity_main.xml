@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- EditText for entering text to encrypt -->
+    <EditText
+        android:id="@+id/edtInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter text to encrypt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"/>
+
+    <!-- EditText for entering AES key -->
+    <EditText
+        android:id="@+id/edtKey"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter 16 character key"
+        app:layout_constraintTop_toBottomOf="@id/edtInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Button to trigger encryption -->
+    <Button
+        android:id="@+id/btnEncrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encrypt"
+        app:layout_constraintTop_toBottomOf="@id/edtKey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- TextView to display the encrypted text -->
+    <TextView
+        android:id="@+id/tvEncrypted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encrypted data will appear here"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/btnEncrypt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- TextView to display error messages (invalid key length, encryption/decryption failure) -->
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#FF0000"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/tvEncrypted"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Button to trigger decryption -->
+    <Button
+        android:id="@+id/btnDecrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decrypt"
+        app:layout_constraintTop_toBottomOf="@id/tvError"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- TextView to display the decrypted text -->
+    <TextView
+        android:id="@+id/tvDecrypted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decrypted data will appear here"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/btnDecrypt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

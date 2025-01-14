@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".BlowfishActivity">
+    <LinearLayout
+        android:id="@+id/lnrblowfish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+
+
+
+    <!-- Input Text -->
+    <EditText
+        android:id="@+id/edtInputblowfish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter text"
+        android:layout_marginTop="16dp"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Key Input Text -->
+    <EditText
+        android:id="@+id/edtKeyblowfish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter key"
+        android:layout_marginTop="16dp"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/edtInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Encrypt Button -->
+    <Button
+        android:id="@+id/btnEncryptblowfish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encrypt"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/edtKey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Decrypt Button -->
+    <Button
+        android:id="@+id/btnDecryptblowfish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decrypt"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnEncrypt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Encrypted Text Display -->
+    <TextView
+        android:id="@+id/tvEncryptedblowfish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encrypted Text"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnDecrypt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Decrypted Text Display -->
+    <TextView
+        android:id="@+id/tvDecryptedblowfish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decrypted Text"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvEncrypted"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Error Message -->
+    <TextView
+        android:id="@+id/tvErrorblowfish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@android:color/holo_red_light"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvDecrypted"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    </LinearLayout>
+
+
+    </LinearLayout>

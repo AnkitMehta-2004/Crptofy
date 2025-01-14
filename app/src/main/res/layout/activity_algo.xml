@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context=".AlgoActivity">
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=" Symmetric Algorithm"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <!-- Buttons for AES, DES, Blowfish -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+
+
+        <Button
+            android:id="@+id/btnDES"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+
+            android:backgroundTint="#F6DF0B"
+            android:textColor="@color/black"
+            android:text="DES" />
+        <Button
+            android:id="@+id/btnAES"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:backgroundTint="#F6DF0B"
+            android:textColor="@color/black"
+            android:text="AES" />
+
+        <Button
+            android:id="@+id/btnBlowfish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:backgroundTint="#F6DF0B"
+            android:textColor="@color/black"
+            android:text="Blowfish" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <!-- Algorithm Definitions Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DES :"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tvDESDef"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DES (Data Encryption Standard) is a symmetric-key block cipher that uses a 56-bit key to encrypt data in 64-bit blocks. It is now considered insecure due to its short key length."
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="start|top"
+            android:lineSpacingExtra="4dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textAlignment="viewStart"
+            android:maxLines="5"
+            android:ellipsize="end"
+            android:scrollHorizontally="false"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Algorithm Definitions Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AES :"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tvAESDef"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AES (Advanced Encryption Standard) is a symmetric-key block cipher used to encrypt and decrypt data.\n\nIt uses a fixed block size of 128 bits and key sizes of 128, 192, or 256 bits."
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="start|top"
+            android:lineSpacingExtra="4dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textAlignment="viewStart" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Algorithm Definitions Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blowfish :"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/tvBlowfishDef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blowfish is a symmetric-key block cipher that uses variable-length keys, typically from 32 bits to 448 bits. It operates on 64-bit blocks and is known for its speed and security."
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="start|top"
+            android:lineSpacingExtra="4dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textAlignment="viewStart"
+            />
+    </LinearLayout>
+
+</LinearLayout>
